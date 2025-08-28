@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portland AI Engineers (PIng) - A community of software developers exploring generative AI through hands-on experimentation">
+    <title>Portland AI Engineers - Community Hub for AI Development</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <span class="brand-text">Portland AI Engineers</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sponsorship.html">Sponsorship</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="present.html">Present</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-primary btn-sm rounded-pill px-3" href="https://www.meetup.com/portland-ai-engineers/events/calendar/" target="_blank">
+                            View Calendar
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100 pt-5">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Welcome to your <span class="text-gradient">community hub</span></h1>
+                    <p class="lead mb-4">Portland AI Engineers is a community of software developers exploring generative AI through hands-on experimentation.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#events" class="btn btn-primary btn-lg rounded-pill px-4">
+                            <i class="bi bi-calendar-event me-2"></i>View Events
+                        </a>
+                        <a href="present.html" class="btn btn-outline-primary btn-lg rounded-pill px-4">
+                            <i class="bi bi-mic me-2"></i>Present Your Work
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-visual">
+                        <div class="hero-image-container">
+                            <img src="images/events/meeting-000.webp" alt="Portland AI Engineers Community Meeting" class="hero-event-image">
+                            <div class="image-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold">What We Do</h2>
+                    <p class="lead text-muted">Building practical AI applications together</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card h-100 p-4 bg-white rounded-4 shadow-sm">
+                        <div class="feature-icon mb-3">
+                            <i class="bi bi-lightbulb display-4 text-primary"></i>
+                        </div>
+                        <h4>Build Applications</h4>
+                        <p>Create practical AI applications that solve real-world problems using cutting-edge language models and tools.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card h-100 p-4 bg-white rounded-4 shadow-sm">
+                        <div class="feature-icon mb-3">
+                            <i class="bi bi-people display-4 text-success"></i>
+                        </div>
+                        <h4>Share Knowledge</h4>
+                        <p>Present projects in various formats and learn from developers across all experience levels.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card h-100 p-4 bg-white rounded-4 shadow-sm">
+                        <div class="feature-icon mb-3">
+                            <i class="bi bi-diagram-3 display-4 text-info"></i>
+                        </div>
+                        <h4>Connect & Grow</h4>
+                        <p>Join a supportive community that brings people closer, helping them connect, learn, and grow together.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <section id="events" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold">Upcoming Events</h2>
+                    <p class="lead text-muted">Join us for our next meetup</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="event-card p-5 rounded-4 bg-gradient-primary text-white">
+                        <div class="event-date mb-4">
+                            <span class="badge bg-white text-primary fs-5 px-3 py-2 rounded-pill">
+                                <i class="bi bi-calendar3 me-2"></i>Thursday, September 11th
+                            </span>
+                        </div>
+                        <h3 class="mb-3">Next Meeting at Instrument</h3>
+                        <div class="mb-4">
+                            <h5 class="mb-3">Featured Presentations:</h5>
+                            <div class="mb-3">
+                                <div class="d-flex align-items-start mb-2">
+                                    <i class="bi bi-mic-fill me-2 mt-1"></i>
+                                    <div>
+                                        <strong>Overview of Instrument</strong> by John Brown
+                                        <p class="small text-white-50 mb-0">John will provide an overview of Instrument, sharing insights about the company's approach to design and technology.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-flex align-items-start">
+                                    <i class="bi bi-mic-fill me-2 mt-1"></i>
+                                    <div>
+                                        <strong>AI Tooling and Approaches at Netflix</strong> by Rob Story
+                                        <p class="small text-white-50 mb-0">Rob will discuss the AI tools and methodologies used at Netflix, providing insights into how a major tech company approaches AI implementation at scale.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://www.meetup.com/portland-ai-engineers/events/310689706/" target="_blank" class="btn btn-light btn-lg rounded-pill px-4">
+                            <i class="bi bi-arrow-right-circle me-2"></i>RSVP Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="display-5 fw-bold mb-4">Join Our Growing Community</h2>
+                    <p class="lead mb-5">Connect with developers, share your projects, and explore the future of AI together.</p>
+                    <div class="d-flex justify-content-center flex-wrap gap-3">
+                        <a href="about.html" class="btn btn-outline-primary btn-lg rounded-pill px-4">
+                            Learn More About Us
+                        </a>
+                        <a href="sponsorship.html" class="btn btn-outline-success btn-lg rounded-pill px-4">
+                            Become a Sponsor
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-lg-12 text-center">
+                    <h3 class="mb-4">Our Amazing Sponsors</h3>
+                    <div class="sponsor-logos d-flex justify-content-center flex-wrap gap-4">
+                        <a href="https://www.piepdx.com/" target="_blank" class="sponsor-logo bg-white p-3 rounded text-decoration-none">
+                            <img src="images/sponsors/logo_pie.webp" alt="PIE - Portland Incubator Experiment" class="sponsor-image">
+                        </a>
+                        <a href="https://siliconflorist.com/" target="_blank" class="sponsor-logo bg-white p-3 rounded text-decoration-none">
+                            <img src="images/sponsors/logo_siliconflorist.webp" alt="Silicon Florist" class="sponsor-image">
+                        </a>
+                        <a href="https://alteredcraft.com/" target="_blank" class="sponsor-logo bg-white p-3 rounded text-decoration-none">
+                            <img src="images/sponsors/logo_alteredcraft.webp" alt="AlteredCraft" class="sponsor-image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <h5 class="mb-3">Portland AI Engineers</h5>
+                    <p>Building the future of AI, one meetup at a time.</p>
+                    <p>
+                        <i class="bi bi-envelope me-2"></i>
+                        <a href="mailto:info@portlandai.engineer" class="text-white-50">info@portlandai.engineer</a>
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white-50">About</a></li>
+                        <li><a href="sponsorship.html" class="text-white-50">Sponsorship</a></li>
+                        <li><a href="present.html" class="text-white-50">Present</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="mb-3">Connect</h5>
+                    <div class="social-links">
+                        <a href="https://www.meetup.com/portland-ai-engineers/events/calendar/" target="_blank" class="text-white-50 me-3 fs-4">
+                            <i class="bi bi-calendar-event"></i>
+                        </a>
+                        <a href="mailto:info@portlandai.engineer" class="text-white-50 fs-4">
+                            <i class="bi bi-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="text-white-50 mb-0">&copy; 2024 Portland AI Engineers. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

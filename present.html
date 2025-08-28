@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Present at Portland AI Engineers - Share your AI projects and insights">
+    <title>Present - Portland AI Engineers</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <span class="brand-text">Portland AI Engineers</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sponsorship.html">Sponsorship</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="present.html">Present</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-primary btn-sm rounded-pill px-3" href="https://www.meetup.com/portland-ai-engineers/events/calendar/" target="_blank">
+                            View Calendar
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-light text-white py-3">
+        <div class="container">
+            <div class="row align-items-center pt-2">
+                <div class="col-lg-12 text-center">
+                    <h1 class="display-4 fw-bold mb-4">Share Your Work</h1>
+                    <p class="lead">Present your AI projects and insights to our community</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Present Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold">Why Present at Portland AI Engineers?</h2>
+                    <p class="lead text-muted">Join a community of innovators and thought leaders</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="benefit-card text-center">
+                        <i class="bi bi-diagram-3 display-3 text-primary mb-3"></i>
+                        <h5>Knowledge Exchange</h5>
+                        <p class="text-muted">Share insights and learn from peers</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="benefit-card text-center">
+                        <i class="bi bi-people display-3 text-success mb-3"></i>
+                        <h5>Networking</h5>
+                        <p class="text-muted">Connect with Portland's AI community</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="benefit-card text-center">
+                        <i class="bi bi-chat-dots display-3 text-info mb-3"></i>
+                        <h5>Feedback</h5>
+                        <p class="text-muted">Get valuable input on your ideas</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="benefit-card text-center">
+                        <i class="bi bi-lightbulb display-3 text-warning mb-3"></i>
+                        <h5>Collaboration</h5>
+                        <p class="text-muted">Find partners for future projects</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Presentation Formats -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold">Presentation Formats</h2>
+                    <p class="lead text-muted">Choose the format that works best for your content</p>
+                </div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4">
+                    <div class="format-card h-100 p-4 bg-white rounded-4 shadow-sm">
+                        <div class="format-icon mb-3">
+                            <i class="bi bi-mic-fill display-4 text-primary"></i>
+                        </div>
+                        <h4>Technical Deep Dives</h4>
+                        <p class="text-muted mb-3">60 minutes</p>
+                        <p>In-depth exploration of technical topics, architectures, or complex implementations.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="format-card h-100 p-4 bg-white rounded-4 shadow-sm">
+                        <div class="format-icon mb-3">
+                            <i class="bi bi-lightning-fill display-4 text-warning"></i>
+                        </div>
+                        <h4>Lightning Talks</h4>
+                        <p class="text-muted mb-3">10-15 minutes</p>
+                        <p>Quick presentations perfect for showcasing projects, tools, or sharing insights.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="format-card h-100 p-4 bg-white rounded-4 shadow-sm">
+                        <div class="format-icon mb-3">
+                            <i class="bi bi-people-fill display-4 text-success"></i>
+                        </div>
+                        <h4>Alternative Formats</h4>
+                        <p class="text-muted mb-3">Flexible timing</p>
+                        <p>Panel discussions, structured demos, workshops, or other creative formats.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preferred Topics -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="text-center mb-5">
+                        <h2 class="display-5 fw-bold">Preferred Presentation Topics</h2>
+                        <p class="lead text-muted">Topics that resonate with our community</p>
+                    </div>
+                    <div class="topics-grid row g-3">
+                        <div class="col-md-6">
+                            <div class="topic-item d-flex align-items-center p-3 bg-light rounded-3">
+                                <i class="bi bi-code-slash text-primary fs-4 me-3"></i>
+                                <span>Technical AI application development</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="topic-item d-flex align-items-center p-3 bg-light rounded-3">
+                                <i class="bi bi-diagram-2 text-success fs-4 me-3"></i>
+                                <span>AI system architecture</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="topic-item d-flex align-items-center p-3 bg-light rounded-3">
+                                <i class="bi bi-tools text-info fs-4 me-3"></i>
+                                <span>Development practices for AI applications</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="topic-item d-flex align-items-center p-3 bg-light rounded-3">
+                                <i class="bi bi-chat-text text-warning fs-4 me-3"></i>
+                                <span>Prompt engineering techniques</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="topic-item d-flex align-items-center p-3 bg-light rounded-3">
+                                <i class="bi bi-shield-check text-danger fs-4 me-3"></i>
+                                <span>Ethical AI implementation</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="topic-item d-flex align-items-center p-3 bg-light rounded-3">
+                                <i class="bi bi-graph-up text-purple fs-4 me-3"></i>
+                                <span>Real-world case studies</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Presentation Guidelines -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="text-center mb-5">
+                        <h2 class="display-5 fw-bold">Presentation Guidelines</h2>
+                        <p class="lead text-muted">Tips for creating engaging presentations</p>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="guideline-card h-100 p-4 bg-white rounded-4">
+                                <h5 class="mb-3">
+                                    <i class="bi bi-check-circle text-success me-2"></i>
+                                    Do's
+                                </h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-success me-2"></i>
+                                        Focus on practical applications
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-success me-2"></i>
+                                        Include interactive elements
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-success me-2"></i>
+                                        Use visual aids and demos
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-success me-2"></i>
+                                        Prepare for Q&A session
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-success me-2"></i>
+                                        Test technical setup in advance
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-success me-2"></i>
+                                        Provide additional resources
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="guideline-card h-100 p-4 bg-white rounded-4">
+                                <h5 class="mb-3">
+                                    <i class="bi bi-x-circle text-danger me-2"></i>
+                                    Don'ts
+                                </h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="bi bi-x text-danger me-2"></i>
+                                        Use as commercial advertisement
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-x text-danger me-2"></i>
+                                        Exceed time limits
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-x text-danger me-2"></i>
+                                        Assume technical expertise
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-x text-danger me-2"></i>
+                                        Ignore audience questions
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-x text-danger me-2"></i>
+                                        Skip preparation
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-x text-danger me-2"></i>
+                                        Forget to test equipment
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Submission Process -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center mb-5">
+                        <h2 class="display-5 fw-bold">How to Submit Your Presentation</h2>
+                    </div>
+                    <div class="submission-card p-5 bg-gradient-primary text-white rounded-4">
+                        <h4 class="mb-4">Email your proposal to: <strong>info@portlandai.engineer</strong></h4>
+                        <p class="lead mb-4">Include the following information:</p>
+                        <ul class="submission-list">
+                            <li class="mb-3">
+                                <i class="bi bi-1-circle-fill me-2"></i>
+                                <strong>Brief description</strong> of your presentation (1-2 paragraphs)
+                            </li>
+                            <li class="mb-3">
+                                <i class="bi bi-2-circle-fill me-2"></i>
+                                <strong>Preferred format</strong> and estimated length
+                            </li>
+                            <li class="mb-3">
+                                <i class="bi bi-3-circle-fill me-2"></i>
+                                <strong>Short bio</strong> highlighting relevant experience
+                            </li>
+                            <li class="mb-3">
+                                <i class="bi bi-4-circle-fill me-2"></i>
+                                <strong>Any special requirements</strong> (equipment, setup, etc.)
+                            </li>
+                        </ul>
+                        <div class="text-center mt-4">
+                            <a href="mailto:info@portlandai.engineer?subject=Presentation%20Proposal" class="btn btn-light btn-lg rounded-pill px-4">
+                                <i class="bi bi-envelope me-2"></i>Submit Your Proposal
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Welcome -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="display-5 fw-bold mb-4">Who We Welcome</h2>
+                    <div class="alert alert-info border-0 rounded-4 p-4">
+                        <i class="bi bi-info-circle display-4 mb-3"></i>
+                        <p class="lead mb-0">
+                            We welcome presenters from <strong>all backgrounds</strong> who are actively building with AI technologies. Whether you're a seasoned expert or just starting your AI journey, if you have insights to share, we want to hear from you!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="text-center mb-5">
+                        <h2 class="display-5 fw-bold">Presentation Tips</h2>
+                        <p class="lead text-muted">Make your presentation memorable</p>
+                    </div>
+                    <div class="tips-grid row g-4">
+                        <div class="col-md-4">
+                            <div class="tip-card p-3 bg-light rounded-3">
+                                <h6 class="fw-bold">Keep it Focused</h6>
+                                <p class="small mb-0">Choose a clear, specific topic rather than trying to cover too much ground.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="tip-card p-3 bg-light rounded-3">
+                                <h6 class="fw-bold">Tell a Story</h6>
+                                <p class="small mb-0">Structure your presentation with a beginning, middle, and end.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="tip-card p-3 bg-light rounded-3">
+                                <h6 class="fw-bold">Practice Timing</h6>
+                                <p class="small mb-0">Rehearse to ensure you stay within your allotted time.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="tip-card p-3 bg-light rounded-3">
+                                <h6 class="fw-bold">Engage Your Audience</h6>
+                                <p class="small mb-0">Ask questions, run polls, or include interactive demos.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="tip-card p-3 bg-light rounded-3">
+                                <h6 class="fw-bold">Prepare for Questions</h6>
+                                <p class="small mb-0">Anticipate what the audience might ask and have answers ready.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="tip-card p-3 bg-light rounded-3">
+                                <h6 class="fw-bold">Share Resources</h6>
+                                <p class="small mb-0">Provide links, code repos, or slides for deeper exploration.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-gradient-secondary text-white">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="display-5 fw-bold mb-4">Ready to Share Your Knowledge?</h2>
+                    <p class="lead mb-5">Join our lineup of innovative speakers and inspire the community</p>
+                    <a href="mailto:info@portlandai.engineer?subject=Presentation%20Proposal" class="btn btn-light btn-lg rounded-pill px-5">
+                        <i class="bi bi-mic me-2"></i>Submit Your Presentation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-lg-12 text-center">
+                    <h3 class="mb-4">Our Amazing Sponsors</h3>
+                    <div class="sponsor-logos d-flex justify-content-center flex-wrap gap-4">
+                        <a href="https://www.piepdx.com/" target="_blank" class="sponsor-logo bg-white p-3 rounded text-decoration-none">
+                            <img src="images/sponsors/logo_pie.webp" alt="PIE - Portland Incubator Experiment" class="sponsor-image">
+                        </a>
+                        <a href="https://siliconflorist.com/" target="_blank" class="sponsor-logo bg-white p-3 rounded text-decoration-none">
+                            <img src="images/sponsors/logo_siliconflorist.webp" alt="Silicon Florist" class="sponsor-image">
+                        </a>
+                        <a href="https://alteredcraft.com/" target="_blank" class="sponsor-logo bg-white p-3 rounded text-decoration-none">
+                            <img src="images/sponsors/logo_alteredcraft.webp" alt="AlteredCraft" class="sponsor-image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <h5 class="mb-3">Portland AI Engineers</h5>
+                    <p>Building the future of AI, one meetup at a time.</p>
+                    <p>
+                        <i class="bi bi-envelope me-2"></i>
+                        <a href="mailto:info@portlandai.engineer" class="text-white-50">info@portlandai.engineer</a>
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white-50">About</a></li>
+                        <li><a href="sponsorship.html" class="text-white-50">Sponsorship</a></li>
+                        <li><a href="present.html" class="text-white-50">Present</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="mb-3">Connect</h5>
+                    <div class="social-links">
+                        <a href="https://www.meetup.com/portland-ai-engineers/events/calendar/" target="_blank" class="text-white-50 me-3 fs-4">
+                            <i class="bi bi-calendar-event"></i>
+                        </a>
+                        <a href="mailto:info@portlandai.engineer" class="text-white-50 fs-4">
+                            <i class="bi bi-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="text-white-50 mb-0">&copy; 2024 Portland AI Engineers. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
