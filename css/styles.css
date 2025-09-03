@@ -221,15 +221,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-outline-primary {
-    border: 2px solid rgba(255, 255, 255, 0.8);
-    color: white;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    border: 2px solid transparent;
+    color: var(--primary-color);
+    background: transparent;
 }
 
 .btn-outline-primary:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: white;
+    background: var(--primary-color);
+    border-color: var(--primary-color);
     color: white;
     transform: translateY(-2px);
 }
@@ -316,7 +315,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sponsor-logo {
-    min-width: 150px;
+    min-width: 188px;
     text-align: center;
     transition: transform 0.3s ease;
     display: flex;
@@ -329,8 +328,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sponsor-image {
-    max-width: 120px;
-    max-height: 60px;
+    max-width: 150px;
+    max-height: 75px;
     width: auto;
     height: auto;
     object-fit: contain;
@@ -392,7 +391,7 @@ footer a:hover {
     }
     
     .sponsor-logo {
-        min-width: 100px;
+        min-width: 125px;
     }
     
     .btn-lg {

@@ -31,11 +31,9 @@ Portland AI Engineers is a vibrant community focused on:
 If you have Python installed:
 
 ```bash
-# Python 3
-python -m http.server 8000
+# Python
+uv run python -m http.server 8000
 
-# Python 2
-python -m SimpleHTTPServer 8000
 ```
 
 Then open your browser and navigate to: `http://localhost:8000`
