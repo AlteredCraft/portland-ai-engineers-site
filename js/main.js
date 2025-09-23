@@ -100,7 +100,6 @@ document.addEventListener('DOMContentLoaded', function() {
             transform: translateY(0) !important;
         }
         .navbar-scrolled {
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
             backdrop-filter: blur(20px);
         }
     `;
