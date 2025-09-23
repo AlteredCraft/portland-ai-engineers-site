@@ -2,20 +2,13 @@
 
 A modern, responsive website for Portland AI Engineers - a community of software developers exploring generative AI through hands-on experimentation.
 
-## About PIPortland AI Engineers
+## About Portland AI Engineers
 
 Portland AI Engineers is a vibrant community focused on:
 - Building practical AI applications
 - Sharing knowledge through presentations and meetups
 - Connecting developers across all experience levels
 - Fostering innovation in AI development
-
-## Website Features
-
-- **Modern Design**: Bright, contemporary interface with gradient animations
-- **Fully Responsive**: Optimized for desktop, tablet, and mobile devices
-- **Fast & Lightweight**: Pure HTML/CSS/JavaScript with Bootstrap 5
-- **GitHub Pages Ready**: Static site perfect for free GitHub Pages hosting
 
 ## Pages
 
@@ -64,7 +57,7 @@ Then open your browser and navigate to: `http://localhost:8000`
    git push -u origin main
    ```
 
-2. **Enable GitHub Pages**
+2. **Enable GitHub Pages (this has been done)**
    - Go to your repository on GitHub
    - Navigate to Settings > Pages
    - Under "Source", select "Deploy from a branch"
@@ -84,15 +77,6 @@ Then open your browser and navigate to: `http://localhost:8000`
 - **Bootstrap Icons** - Icon library
 - **Google Fonts** - Inter font family
 
-## Browser Support
-
-The site is compatible with all modern browsers:
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers on iOS and Android
-
 ## Customization
 
 ### Updating Content
@@ -111,7 +95,3 @@ The site is compatible with all modern browsers:
 
 - **Email**: info@portlandai.engineer
 - **Meetup**: https://www.meetup.com/portland-ai-engineers/
-
-## License
-
-This website is for Portland AI Engineers community use.
