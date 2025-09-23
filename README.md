@@ -95,3 +95,22 @@ Then open your browser and navigate to: `http://localhost:8000`
 
 - **Email**: info@portlandai.engineer
 - **Meetup**: https://www.meetup.com/portland-ai-engineers/
+
+## Appendix: Favicon and App Icons
+
+The site uses a comprehensive icon system for optimal display across browsers and devices:
+
+### Logo Icons (Brand Representation)
+- `images/branding/logo-full-color-192x192.png` - Primary app icon (192x192)
+- `images/branding/logo-full-color-512x512.png` - High-res app icon (512x512)
+- `images/branding/logo-full-color-180x180.png` - Apple touch icon (180x180)
+
+### Favicon Icons (Browser UI)
+- `favicon.ico` - Standard browser favicon
+- `favicon.svg` - Vector favicon for modern browsers
+
+### Maskable Icons (Android PWA)
+- `web-app-manifest-192x192.png` - Maskable icon with safe area padding
+- `web-app-manifest-512x512.png` - High-res maskable icon
+
+**Purpose:** Logo icons display the Portland AI Engineers brand in social sharing and app launchers, while maskable icons ensure proper display on Android devices that apply shaped masks to icons.
