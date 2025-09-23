@@ -64,10 +64,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-logo {
-    height: 300px !important;
+    height: 225px !important;
     width: auto !important;
-    max-width: 1500px !important;
-    max-height: 300px !important;
+    max-width: 1125px !important;
+    max-height: 225px !important;
     object-fit: contain;
     display: block;
 }
@@ -389,8 +389,8 @@ footer a:hover {
     }
     
     .navbar-logo {
-        height: 160px;
-        max-width: 750px;
+        height: 120px;
+        max-width: 562px;
     }
     
     .sponsor-logo {
