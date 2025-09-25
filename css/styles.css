@@ -1,16 +1,19 @@
 :root {
-    --primary-color: #F59E0B;
-    --secondary-color: #E68900;
+    --primary-color: #DE3D5B;
+    --secondary-color: #C23050;
+    --button-color: #F59E0B;
+    --button-secondary: #E68900;
     --success-color: #10b981;
     --info-color: #06b6d4;
     --warning-color: #f59e0b;
     --danger-color: #ef4444;
     --light-color: #f8fafc;
     --dark-color: #1a1a1a;
-    --gradient-primary: linear-gradient(135deg, #F59E0B 0%, #E68900 100%);
-    --gradient-secondary: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+    --gradient-primary: linear-gradient(135deg, #DE3D5B 0%, #C23050 100%);
+    --gradient-secondary: linear-gradient(135deg, #DE3D5B 0%, #A82645 100%);
+    --gradient-button: linear-gradient(135deg, rgba(245, 158, 11, 0.75) 0%, rgba(230, 137, 0, 0.75) 100%);
     --gradient-success: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-    --gradient-light: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(245, 158, 11, 0.2) 100%);
+    --gradient-light: linear-gradient(135deg, rgba(222, 61, 91, 0.1) 0%, rgba(222, 61, 91, 0.2) 100%);
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --font-headers: 'Playfair Display', Georgia, 'Times New Roman', serif;
     --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -102,7 +105,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, rgba(245, 158, 11, 0.03) 0%, rgba(245, 158, 11, 0.06) 100%);
+    background: white;
     position: relative;
     overflow: hidden;
     padding: 4rem 0;
@@ -115,10 +118,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
     bottom: 0;
-    background:
-        radial-gradient(circle at 20% 80%, rgba(245, 158, 11, 0.08) 0%, transparent 60%),
-        radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.06) 0%, transparent 60%),
-        radial-gradient(circle at 40% 40%, rgba(245, 158, 11, 0.04) 0%, transparent 60%);
+    background: transparent;
     pointer-events: none;
 }
 
@@ -216,7 +216,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary {
-    background: var(--gradient-primary);
+    background: var(--gradient-button);
     color: white;
     box-shadow: 0 4px 15px rgba(245, 158, 11, 0.25);
 }
@@ -224,31 +224,31 @@ h1, h2, h3, h4, h5, h6 {
 .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(245, 158, 11, 0.35);
-    background: var(--gradient-primary);
+    background: var(--gradient-button);
 }
 
 .btn-outline-primary {
     border: 2px solid transparent;
-    color: var(--primary-color);
+    color: var(--button-color);
     background: transparent;
 }
 
 .btn-outline-primary:hover {
-    background: var(--primary-color);
-    border-color: var(--primary-color);
+    background: var(--button-color);
+    border-color: var(--button-color);
     color: white;
     transform: translateY(-2px);
 }
 
 .btn-light {
     background: white;
-    color: var(--primary-color);
+    color: var(--button-color);
     font-weight: 600;
 }
 
 .btn-light:hover {
     background: var(--light-color);
-    color: var(--primary-color);
+    color: var(--button-color);
     transform: translateY(-2px);
 }
 
@@ -276,24 +276,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Event Card */
 .event-card {
-    background: var(--gradient-primary);
     position: relative;
     overflow: hidden;
 }
 
-.event-card::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-    animation: pulse 4s ease-in-out infinite;
-}
-
 .bg-gradient-primary {
-    background: var(--gradient-primary);
+    background: var(--gradient-button);
 }
 
 .bg-gradient-secondary {
@@ -492,7 +480,7 @@ html {
 }
 
 .table thead {
-    background: var(--gradient-primary);
+    background: var(--gradient-button);
     color: white;
 }
 
@@ -500,6 +488,19 @@ html {
 .badge {
     font-weight: 500;
     padding: 0.5rem 1rem;
+}
+
+/* Bootstrap Overrides for Primary Color */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.border-primary {
+    border-color: var(--primary-color) !important;
 }
 
 /* Utility Classes */
