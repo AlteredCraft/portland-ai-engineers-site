@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const href = this.getAttribute('href');
+            const target = document.querySelector(href);
             if (target) {
                 const offset = 80; // Account for fixed navbar
                 const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
@@ -14,6 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     top: targetPosition,
                     behavior: 'smooth'
                 });
+                // Update URL hash without triggering scroll
+                history.pushState(null, null, href);
             }
         });
     });
