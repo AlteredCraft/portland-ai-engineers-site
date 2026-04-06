@@ -505,6 +505,13 @@ footer a:hover {
     margin-top: 0.2rem;
 }
 
+/* Past Events Pagination */
+.past-events-load-more {
+    display: block;
+    margin: 1.5rem auto 0;
+    font-size: 0.95rem;
+}
+
 /* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
