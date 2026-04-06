@@ -237,9 +237,69 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Fetch and render past events from Luma API
+    // Fetch and render past events with pagination
     const pastEventsContainer = document.getElementById('past-events-list');
     if (pastEventsContainer) {
+        const EVENTS_PER_PAGE = 6;
+        let allEvents = [];
+        let visibleCount = 0;
+
+        function renderEventCard(evt) {
+            const date = new Date(evt.start_at);
+            const dateStr = date.toLocaleDateString('en-US', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                timeZone: evt.timezone || 'America/Los_Angeles'
+            });
+            const href = evt.event_url || ('https://lu.ma/' + evt.url);
+            const coverImg = evt.cover_url
+                ? `<img src="${evt.cover_url}" alt="" class="past-event-cover">`
+                : '';
+            return `
+                <a href="${href}" target="_blank" rel="noopener noreferrer" class="past-event-card">
+                    ${coverImg}
+                    <div class="past-event-info">
+                        <div class="past-event-date">${dateStr}</div>
+                        <div class="past-event-name">${evt.name}</div>
+                        ${evt.location ? `<div class="past-event-location"><i class="bi bi-geo-alt"></i> ${evt.location}</div>` : ''}
+                    </div>
+                </a>
+            `;
+        }
+
+        function renderPage() {
+            const nextBatch = allEvents.slice(visibleCount, visibleCount + EVENTS_PER_PAGE);
+            visibleCount += nextBatch.length;
+
+            // On first render, clear the loading message
+            if (visibleCount === nextBatch.length) {
+                pastEventsContainer.innerHTML = '';
+            }
+
+            // Remove existing "Show more" button if present
+            const existingBtn = pastEventsContainer.querySelector('.past-events-load-more');
+            if (existingBtn) existingBtn.remove();
+
+            // Append new cards
+            const wrapper = document.createElement('div');
+            wrapper.innerHTML = nextBatch.map(renderEventCard).join('');
+            while (wrapper.firstChild) {
+                pastEventsContainer.appendChild(wrapper.firstChild);
+            }
+
+            // Add "Show more" button if there are remaining events
+            const remaining = allEvents.length - visibleCount;
+            if (remaining > 0) {
+                const loadMoreBtn = document.createElement('button');
+                loadMoreBtn.className = 'btn btn-outline-primary past-events-load-more';
+                loadMoreBtn.textContent = `Show more (${remaining} remaining)`;
+                loadMoreBtn.addEventListener('click', renderPage);
+                pastEventsContainer.appendChild(loadMoreBtn);
+            }
+        }
+
         fetch('data/past-events.json')
             .then(response => response.json())
             .then(events => {
@@ -247,33 +307,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     pastEventsContainer.innerHTML = '<p class="text-center text-muted">No past events yet.</p>';
                     return;
                 }
-                // Sort most recent first
                 events.sort((a, b) => new Date(b.start_at) - new Date(a.start_at));
-                const html = events.map(evt => {
-                    const date = new Date(evt.start_at);
-                    const dateStr = date.toLocaleDateString('en-US', {
-                        weekday: 'long',
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric',
-                        timeZone: evt.timezone || 'America/Los_Angeles'
-                    });
-                    const lumaUrl = 'https://lu.ma/' + evt.url;
-                    const coverImg = evt.cover_url
-                        ? `<img src="${evt.cover_url}" alt="" class="past-event-cover">`
-                        : '';
-                    return `
-                        <a href="${lumaUrl}" target="_blank" rel="noopener noreferrer" class="past-event-card">
-                            ${coverImg}
-                            <div class="past-event-info">
-                                <div class="past-event-date">${dateStr}</div>
-                                <div class="past-event-name">${evt.name}</div>
-                                ${evt.location ? `<div class="past-event-location"><i class="bi bi-geo-alt"></i> ${evt.location}</div>` : ''}
-                            </div>
-                        </a>
-                    `;
-                }).join('');
-                pastEventsContainer.innerHTML = html;
+                allEvents = events;
+                renderPage();
             })
             .catch(() => {
                 pastEventsContainer.innerHTML = '<p class="text-center text-muted">Unable to load past events.</p>';

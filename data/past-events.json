@@ -1,12 +1,33 @@
 [
   {
+    "name": "Let's Build with A.I.",
+    "start_at": "2026-04-02T20:00:00.000Z",
+    "end_at": "2026-04-02T23:00:00.000Z",
+    "timezone": "America/Los_Angeles",
+    "url": null,
+    "event_url": "https://www.meetup.com/portland-ai-engineers/events/313877440/",
+    "cover_url": null,
+    "location": "Metro Region Innovation Hub"
+  },
+  {
     "name": "Portland AI Engineers March Meeting : Demo Night!",
     "start_at": "2026-03-19T00:00:00.000Z",
     "end_at": "2026-03-19T02:30:00.000Z",
     "timezone": "America/Los_Angeles",
     "url": "ikw1w29s",
+    "event_url": "https://lu.ma/ikw1w29s",
     "cover_url": "https://images.lumacdn.com/event-covers/9d/e917fdc3-696f-479a-bbbd-df2e5f228f4f.png",
     "location": "Multnomah County Library - Albina"
+  },
+  {
+    "name": "Let's Build with A.I.",
+    "start_at": "2026-03-05T21:00:00.000Z",
+    "end_at": "2026-03-06T00:00:00.000Z",
+    "timezone": "America/Los_Angeles",
+    "url": null,
+    "event_url": "https://www.meetup.com/portland-ai-engineers/events/313496715/",
+    "cover_url": null,
+    "location": "Metro Region Innovation Hub"
   },
   {
     "name": "Portland AI Engineers Feb 2026 Meeting",
@@ -14,7 +35,108 @@
     "end_at": "2026-02-19T03:30:00.000Z",
     "timezone": "America/Los_Angeles",
     "url": "m3ho9fza",
+    "event_url": "https://lu.ma/m3ho9fza",
     "cover_url": "https://images.lumacdn.com/event-covers/9d/e917fdc3-696f-479a-bbbd-df2e5f228f4f.png",
     "location": "Multnomah County Library - Albina"
+  },
+  {
+    "name": "Portland AI Engineers January Meeting",
+    "start_at": "2026-01-15T01:00:00.000Z",
+    "end_at": "2026-01-15T03:00:00.000Z",
+    "timezone": "America/Los_Angeles",
+    "url": null,
+    "event_url": "https://www.meetup.com/portland-ai-engineers/events/312283129/",
+    "cover_url": null,
+    "location": "Metro Region Innovation Hub"
+  },
+  {
+    "name": "Portland AI Engineers: December Networking Meetup",
+    "start_at": "2025-12-18T01:00:00.000Z",
+    "end_at": "2025-12-18T03:00:00.000Z",
+    "timezone": "America/Los_Angeles",
+    "url": null,
+    "event_url": "https://www.meetup.com/portland-ai-engineers/events/312281983/",
+    "cover_url": null,
+    "location": "Lucky Lab Hawthorne"
+  },
+  {
+    "name": "Portland AI Engineers November Meeting",
+    "start_at": "2025-11-20T01:00:00.000Z",
+    "end_at": "2025-11-20T03:00:00.000Z",
+    "timezone": "America/Los_Angeles",
+    "url": null,
+    "event_url": "https://www.meetup.com/portland-ai-engineers/events/311784967/",
+    "cover_url": null,
+    "location": "Multnomah County Library - Albina"
+  },
+  {
+    "name": "Portland AI Engineers October Meeting",
+    "start_at": "2025-10-22T00:30:00.000Z",
+    "end_at": "2025-10-22T02:30:00.000Z",
+    "timezone": "America/Los_Angeles",
+    "url": null,
+    "event_url": "https://www.meetup.com/portland-ai-engineers/events/311185284/",
+    "cover_url": null,
+    "location": "Multnomah County Library - Albina"
+  },
+  {
+    "name": "Cafe co-working: Vancouver edition",
+    "start_at": "2025-10-09T15:30:00.000Z",
+    "end_at": "2025-10-09T17:30:00.000Z",
+    "timezone": "America/Los_Angeles",
+    "url": null,
+    "event_url": "https://www.meetup.com/portland-ai-engineers/events/311309266/",
+    "cover_url": null,
+    "location": "Gold Cup Coffee House, Vancouver, WA"
+  },
+  {
+    "name": "Portland AI Engineers September Meeting",
+    "start_at": "2025-09-12T00:00:00.000Z",
+    "end_at": "2025-09-12T02:30:00.000Z",
+    "timezone": "America/Los_Angeles",
+    "url": null,
+    "event_url": "https://www.meetup.com/portland-ai-engineers/events/310689706/",
+    "cover_url": null,
+    "location": "Instrument"
+  },
+  {
+    "name": "Portland AI Engineers: Casual August Networking Meetup",
+    "start_at": "2025-08-21T00:00:00.000Z",
+    "end_at": "2025-08-21T02:00:00.000Z",
+    "timezone": "America/Los_Angeles",
+    "url": null,
+    "event_url": "https://www.meetup.com/portland-ai-engineers/events/310377414/",
+    "cover_url": null,
+    "location": "Lucky Lab Hawthorne"
+  },
+  {
+    "name": "Portland AI Engineers July Meeting",
+    "start_at": "2025-07-17T00:00:00.000Z",
+    "end_at": "2025-07-17T02:30:00.000Z",
+    "timezone": "America/Los_Angeles",
+    "url": null,
+    "event_url": "https://www.meetup.com/portland-ai-engineers/events/308520831/",
+    "cover_url": null,
+    "location": "Instrument"
+  },
+  {
+    "name": "Portland AI Engineers [PIng] June Meeting",
+    "start_at": "2025-06-05T00:00:00.000Z",
+    "end_at": "2025-06-05T02:00:00.000Z",
+    "timezone": "America/Los_Angeles",
+    "url": null,
+    "event_url": "https://www.meetup.com/portland-ai-engineers/events/307683834/",
+    "cover_url": null,
+    "location": "WeWork 830 NE Holladay St"
+  },
+  {
+    "name": "Portland AI Engineers [PIng] Inaugural Meeting",
+    "start_at": "2025-05-01T01:00:00.000Z",
+    "end_at": "2025-05-01T03:00:00.000Z",
+    "timezone": "America/Los_Angeles",
+    "url": null,
+    "event_url": "https://www.meetup.com/portland-ai-engineers/events/307213461/",
+    "cover_url": null,
+    "location": "Kiln Portland"
   }
 ]
