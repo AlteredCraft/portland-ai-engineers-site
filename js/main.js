@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Active navigation link highlighting
     const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
     function highlightNavLink() {
         let scrollY = window.pageYOffset;
@@ -218,6 +218,67 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     `;
     document.head.appendChild(rippleStyle);
+
+    // Event tab switching
+    document.querySelectorAll('.event-tabs .nav-link').forEach(tab => {
+        tab.addEventListener('click', function() {
+            document.querySelectorAll('.event-tabs .nav-link').forEach(t => {
+                t.classList.remove('active');
+                t.setAttribute('aria-selected', 'false');
+            });
+            this.classList.add('active');
+            this.setAttribute('aria-selected', 'true');
+
+            const target = this.getAttribute('data-tab');
+            document.querySelectorAll('.event-tab-panel').forEach(panel => {
+                panel.hidden = true;
+            });
+            document.getElementById(target + '-panel').hidden = false;
+        });
+    });
+
+    // Fetch and render past events from Luma API
+    const pastEventsContainer = document.getElementById('past-events-list');
+    if (pastEventsContainer) {
+        fetch('data/past-events.json')
+            .then(response => response.json())
+            .then(events => {
+                if (events.length === 0) {
+                    pastEventsContainer.innerHTML = '<p class="text-center text-muted">No past events yet.</p>';
+                    return;
+                }
+                // Sort most recent first
+                events.sort((a, b) => new Date(b.start_at) - new Date(a.start_at));
+                const html = events.map(evt => {
+                    const date = new Date(evt.start_at);
+                    const dateStr = date.toLocaleDateString('en-US', {
+                        weekday: 'long',
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric',
+                        timeZone: evt.timezone || 'America/Los_Angeles'
+                    });
+                    const lumaUrl = 'https://lu.ma/' + evt.url;
+                    const coverImg = evt.cover_url
+                        ? `<img src="${evt.cover_url}" alt="" class="past-event-cover">`
+                        : '';
+                    return `
+                        <a href="${lumaUrl}" target="_blank" rel="noopener noreferrer" class="past-event-card">
+                            ${coverImg}
+                            <div class="past-event-info">
+                                <div class="past-event-date">${dateStr}</div>
+                                <div class="past-event-name">${evt.name}</div>
+                                ${evt.location ? `<div class="past-event-location"><i class="bi bi-geo-alt"></i> ${evt.location}</div>` : ''}
+                            </div>
+                        </a>
+                    `;
+                }).join('');
+                pastEventsContainer.innerHTML = html;
+            })
+            .catch(() => {
+                pastEventsContainer.innerHTML = '<p class="text-center text-muted">Unable to load past events.</p>';
+            });
+    }
 
     // Console welcome message
     console.log('%c Welcome to Portland AI Engineers! 🤖', 
