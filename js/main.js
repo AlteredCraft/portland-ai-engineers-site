@@ -219,23 +219,55 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(rippleStyle);
 
-    // Event tab switching
-    document.querySelectorAll('.event-tabs .nav-link').forEach(tab => {
-        tab.addEventListener('click', function() {
-            document.querySelectorAll('.event-tabs .nav-link').forEach(t => {
+    // Event tab switching + deep linking (e.g. /#past or /#upcoming)
+    const eventTabs = document.querySelectorAll('.event-tabs .nav-link');
+    if (eventTabs.length) {
+        function activateEventTab(tabName) {
+            const tabButton = document.querySelector(`.event-tabs .nav-link[data-tab="${tabName}"]`);
+            const panel = document.getElementById(tabName + '-panel');
+            if (!tabButton || !panel) return false;
+
+            eventTabs.forEach(t => {
                 t.classList.remove('active');
                 t.setAttribute('aria-selected', 'false');
             });
-            this.classList.add('active');
-            this.setAttribute('aria-selected', 'true');
+            tabButton.classList.add('active');
+            tabButton.setAttribute('aria-selected', 'true');
 
-            const target = this.getAttribute('data-tab');
-            document.querySelectorAll('.event-tab-panel').forEach(panel => {
-                panel.hidden = true;
+            document.querySelectorAll('.event-tab-panel').forEach(p => {
+                p.hidden = true;
             });
-            document.getElementById(target + '-panel').hidden = false;
+            panel.hidden = false;
+            return true;
+        }
+
+        eventTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                const tabName = this.getAttribute('data-tab');
+                activateEventTab(tabName);
+                // Reflect the active tab in the URL so it can be shared / deep-linked
+                history.replaceState(null, '', '#' + tabName);
+            });
         });
-    });
+
+        // Open the tab referenced by the URL hash and scroll it into view
+        function activateTabFromHash() {
+            const tabName = window.location.hash.replace('#', '');
+            if (tabName !== 'past' && tabName !== 'upcoming') return;
+            if (!activateEventTab(tabName)) return;
+
+            const eventsSection = document.getElementById('events');
+            if (eventsSection) {
+                const offset = 80; // Account for fixed navbar
+                const top = eventsSection.getBoundingClientRect().top + window.pageYOffset - offset;
+                window.scrollTo({ top, behavior: 'smooth' });
+            }
+        }
+
+        // Honor a deep link on initial load, and respond to later hash changes
+        activateTabFromHash();
+        window.addEventListener('hashchange', activateTabFromHash);
+    }
 
     // Fetch and render past events with pagination
     const pastEventsContainer = document.getElementById('past-events-list');
