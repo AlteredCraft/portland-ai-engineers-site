@@ -93,7 +93,7 @@ Then open your browser and navigate to: `http://localhost:8000`
 
 ## Contact
 
-- **Email**: info@portlandai.engineer
+- **Email**: pxdaieng@gmail.com
 - **Meetup**: https://www.meetup.com/portland-ai-engineers/
 
 ## Appendix: Favicon and App Icons
